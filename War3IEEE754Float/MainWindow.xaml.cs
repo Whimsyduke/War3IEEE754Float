@@ -85,7 +85,7 @@ namespace War3IEEE754Float
                 catch
                 {
                     enableEvent = false;
-                    TextBoxFloatValue.Text = "";
+                    TextBoxHexValue.Text = "";
                     enableEvent = true;
                 }
             }
