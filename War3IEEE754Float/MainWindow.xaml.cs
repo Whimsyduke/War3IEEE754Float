@@ -61,7 +61,9 @@ namespace War3IEEE754Float
                 }
                 catch
                 {
-
+                    enableEvent = false;
+                    TextBoxFloatValue.Text = "";
+                    enableEvent = true;
                 }
             }
             e.Handled = true;
@@ -82,7 +84,9 @@ namespace War3IEEE754Float
                 }
                 catch
                 {
-
+                    enableEvent = false;
+                    TextBoxFloatValue.Text = "";
+                    enableEvent = true;
                 }
             }
             e.Handled = true;
