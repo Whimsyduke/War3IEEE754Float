@@ -91,5 +91,21 @@ namespace War3IEEE754Float
             }
             e.Handled = true;
         }
+        
+        private void TextBoxOriginText_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            TextBoxOriginText.Text = "";
+        }
+
+        private void TextBoxOriginText_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            List<string> codeList = TextBoxOriginText.Text.Split('\n').ToList();
+            string newCode = "";
+            foreach (string select in codeList)
+            {
+                if (select.Count() > 11) newCode += select.Substring(11);
+            }
+            Clipboard.SetText(newCode);
+        }
     }
 }

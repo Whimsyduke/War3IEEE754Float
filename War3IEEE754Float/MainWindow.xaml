@@ -5,17 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:War3IEEE754Float"
         mc:Ignorable="d"
-        Title="MainWindow" Height="70" Width="510" MaxHeight="70" MaxWidth="510" MinHeight="70" MinWidth="510" WindowStyle="ToolWindow">
+        Title="MainWindow" Height="110" Width="510" MaxHeight="110" MaxWidth="510" MinHeight="110" MinWidth="510" WindowStyle="ToolWindow">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <Label Name="LableHexValue" Grid.Column="0" Content="Hex:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
-        <TextBox Name="TextBoxHexValue" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5" TextChanged="TextBoxHexValue_TextChanged"/>
-        <Label Name="LableFloatValue" Grid.Column="2" Content="Float:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
-        <TextBox Name="TextBoxFloatValue" Grid.Column="3" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5" TextChanged="TextBoxFloatValue_TextChanged"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Name="LableHexValue" Grid.Column="0" Grid.Row="0" Content="Hex:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox Name="TextBoxHexValue" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5" TextChanged="TextBoxHexValue_TextChanged"/>
+        <Label Name="LableFloatValue" Grid.Column="2" Grid.Row="0" Content="Float:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox Name="TextBoxFloatValue" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5" TextChanged="TextBoxFloatValue_TextChanged"/>
+        <Label Name="LableCleanLineNum" Grid.Column="0" Grid.Row="1" Content="清理行号：" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox Name="TextBoxOriginText" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5" TextWrapping="Wrap" AcceptsReturn="True" GotKeyboardFocus="TextBoxOriginText_GotKeyboardFocus" LostKeyboardFocus="TextBoxOriginText_LostKeyboardFocus"/>
     </Grid>
 </Window>
